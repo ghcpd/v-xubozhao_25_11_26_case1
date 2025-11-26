@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Zodiac Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title" data-lang-en="Chinese Zodiac Explorer" data-lang-zh="十二生肖探索">Chinese Zodiac Explorer</h1>
+            
+            <div class="controls">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-text">中文</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search zodiac..."
+                    data-placeholder-en="Search zodiac..."
+                    data-placeholder-zh="搜索生肖..."
+                />
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="filter-wrapper">
+                <label for="elementFilter" class="filter-label" data-lang-en="Element:" data-lang-zh="元素：">Element:</label>
+                <select id="elementFilter" class="element-filter">
+                    <option value="all" data-lang-en="All Elements" data-lang-zh="所有元素">All Elements</option>
+                    <option value="Metal" data-lang-en="Metal" data-lang-zh="金">Metal</option>
+                    <option value="Wood" data-lang-en="Wood" data-lang-zh="木">Wood</option>
+                    <option value="Water" data-lang-en="Water" data-lang-zh="水">Water</option>
+                    <option value="Fire" data-lang-en="Fire" data-lang-zh="火">Fire</option>
+                    <option value="Earth" data-lang-en="Earth" data-lang-zh="土">Earth</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Zodiac Cards Grid -->
+        <section class="zodiac-grid" id="zodiacGrid">
+            <!-- Cards will be dynamically generated here -->
+        </section>
+
+        <!-- Detail Panel -->
+        <div class="detail-panel" id="detailPanel">
+            <button class="close-btn" id="closePanel" aria-label="Close panel">×</button>
+            <div class="detail-content">
+                <div class="detail-icon" id="detailIcon"></div>
+                <h2 class="detail-name" id="detailName"></h2>
+                <p class="detail-name-zh" id="detailNameZh"></p>
+                <div class="detail-element" id="detailElement"></div>
+                <p class="detail-description" id="detailDescription"></p>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
