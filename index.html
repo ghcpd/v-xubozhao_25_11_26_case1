@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>12 Zodiac Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">12-Zodiac Dashboard</div>
+      <div class="controls">
+        <div class="control-group">
+          <label for="search">Search</label>
+          <input id="search" placeholder="Search name or keyword (EN / 中文)" />
+        </div>
+
+        <div class="control-group">
+          <label for="filter-element">Element</label>
+          <select id="filter-element">
+            <option value="all">All Elements</option>
+            <option value="Wood">Wood</option>
+            <option value="Fire">Fire</option>
+            <option value="Earth">Earth</option>
+            <option value="Metal">Metal</option>
+            <option value="Water">Water</option>
+          </select>
+        </div>
+
+        <div class="control-group toggles">
+          <button id="lang-toggle" aria-pressed="false">中文</button>
+          <button id="theme-toggle" aria-pressed="false">Light</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <section id="zodiac-grid" class="grid" aria-label="12 zodiac grid"></section>
+    </main>
+
+    <!-- Detail panel (slide-in) -->
+    <aside id="detail" class="detail-panel hidden" aria-hidden="true">
+      <button id="close-detail" class="close">✕</button>
+      <div class="detail-content">
+        <div class="detail-hero" id="detail-hero"></div>
+        <h2 id="detail-name"></h2>
+        <h3 id="detail-name-zh"></h3>
+        <div class="meta"><strong>Element:</strong> <span id="detail-element"></span></div>
+        <p id="detail-desc"></p>
+      </div>
+    </aside>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
