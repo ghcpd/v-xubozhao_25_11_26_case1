@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>12 Zodiac Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <h1>12-Zodiac Dashboard</h1>
+      <p class="subtitle">Explore zodiac animals • 探索十二生肖</p>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <label for="elementFilter" class="sr-only">Filter by element</label>
+        <select id="elementFilter" class="element-filter">
+          <option value="all">All Elements / 所有元素</option>
+        </select>
+
+        <input id="searchInput" type="search" placeholder="Search name or keyword..." aria-label="Search" />
+
+        <div class="toggle-group">
+          <button id="langToggle" class="btn toggle">EN / 中文</button>
+          <button id="themeToggle" class="btn toggle" aria-pressed="false">🌞 / 🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cards-grid" id="cardsGrid" aria-live="polite"></section>
+  </main>
+
+  <!-- Slide-in detail panel -->
+  <aside id="detailPanel" class="detail-panel" aria-hidden="true">
+    <button id="closePanel" class="close-btn">✕</button>
+    <div class="detail-content">
+      <div class="detail-icon" id="detailIcon">⏳</div>
+      <h2 id="detailName">Zodiac</h2>
+      <h3 id="detailElement">Element</h3>
+      <p class="detail-desc" id="detailDesc">Personality description</p>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
