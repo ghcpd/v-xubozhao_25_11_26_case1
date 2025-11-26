@@ -1,0 +1,16 @@
+{
+  "name": "raptor-secondary",
+  "version": "1.0.0",
+  "description": "An interactive, client-only dashboard to explore the 12 Chinese zodiac animals with filtering, search, language toggle, and light/dark themes. No backend or external data files required.",
+  "main": "script.js",
+  "scripts": {
+    "test": "node headless-check.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mime-types": "^3.0.2",
+    "puppeteer": "^22.9.0"
+  }
+}
