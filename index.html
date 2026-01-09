@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Zodiac Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="title">🐭 <span data-i18n="title">12 Zodiac Explorer</span></h1>
+            <div class="controls">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search zodiac..."
+                        data-i18n-placeholder="search_placeholder"
+                    >
+                </div>
+                <select id="elementFilter" class="filter-select" data-i18n-placeholder="filter_all">
+                    <option value="">All Elements</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Wood">Wood</option>
+                    <option value="Water">Water</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Earth">Earth</option>
+                </select>
+                <button id="languageToggle" class="toggle-btn language-toggle">
+                    <span class="toggle-label">EN / 中文</span>
+                </button>
+                <button id="themeToggle" class="toggle-btn theme-toggle">
+                    <span class="toggle-label">☀️ / 🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Zodiac Cards Grid -->
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Zodiac Detail Panel -->
+    <div class="detail-panel" id="detailPanel">
+        <button class="close-btn" id="closePanel">&times;</button>
+        <div class="panel-content">
+            <div class="panel-header">
+                <div class="panel-icon" id="panelIcon">🐭</div>
+                <div class="panel-titles">
+                    <h2 id="panelNameEn" class="panel-name-en">Rat</h2>
+                    <h3 id="panelNameZh" class="panel-name-zh">鼠</h3>
+                </div>
+            </div>
+            <div class="panel-details">
+                <div class="detail-item">
+                    <span class="detail-label" data-i18n="element">Element:</span>
+                    <span id="panelElement" class="detail-value">Water</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label" data-i18n="years">Years:</span>
+                    <span id="panelYears" class="detail-value">2024</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label" data-i18n="trait">Key Trait:</span>
+                    <span id="panelTrait" class="detail-value">Intelligent</span>
+                </div>
+            </div>
+            <div class="panel-description">
+                <h3 data-i18n="description">Description</h3>
+                <p id="panelDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for panel -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
